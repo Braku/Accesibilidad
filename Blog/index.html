@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog de Películas</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Blog de Películas</h1>
+        <nav aria-label="Menú principal">
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="reseñas.html">Reseñas</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <button id="accessibility-toggle" aria-label="Abrir menú de accesibilidad" onclick="toggleAccessibilityMenu()"></button>
+
+    <div id="accessibility-menu" class="closed">
+        <h2>Configuraciones de Accesibilidad</h2>
+        <button onclick="adjustTextSize(1)">Aumentar texto</button>
+        <button onclick="adjustTextSize(-1)">Disminuir texto</button>
+        <button onclick="toggleGrayscale()">Escala de grises</button>
+        <button onclick="toggleHighContrast()">Alto contraste</button>
+        <button onclick="toggleLightDarkBackground()">Fondo claro/oscuro</button>
+        <button onclick="toggleUnderlineLinks()">Subrayar enlaces</button>
+        <button onclick="toggleReadableFont()">Fuente legible</button>
+        <button onclick="resetAccessibility()">Reestablecer todo</button>
+    </div>
+
+    <main>
+        
+        <article>
+            <img src="portada.jpg" alt="Portada de la película" class="portada">
+            <h2>Star wars - Episodio IV</h2>
+            <p>Fecha de lanzamiento: 1977</p>
+            <p>Descripción: Es una película de space opera estadounidense, escrita y dirigida por George Lucas. Fue la primera película estrenada de la serie Star Wars y la cuarta en términos de cronología interna: dos filmes subsiguientes continuarían la trama original (The Empire Strikes Back y Return of the Jedi), mientras que una trilogía (La amenaza fantasma, El ataque de los clones y La venganza de los Sith) describiría los eventos previos a La guerra de las galaxias.</p>
+            <button onclick="showMore()" aria-expanded="false" aria-controls="more-info1">Leer más</button>
+            <div id="more-info1" style="display: none;">
+                <p>
+                    Es un período de guerra civil. Las naves espaciales rebeldes, que atacan desde una base oculta, han ganado su primera victoria contra el malvado imperio galáctico. Durante la batalla, espías rebeldes consiguieron robar los planos secretos del arma más reciente del imperio, la Estrella de la Muerte, una estación espacial blindada con el poder suficiente para destruir un planeta entero.
+
+Perseguida por siniestros agentes del imperio, la Princesa Leia se dispone a regresar a su hogar a bordo de su nave, custodiando los planos robados que pueden salvar su pueblo y restablecer la libertad en la galaxia. Sin embargo la transmisión es interceptada por el Imperio Galáctico, dando alcance a la Tantive IV.
+                </p>
+            </div>
+        </article>
+        <article>
+            <img src="portada.jpg" alt="Portada de la película" class="portada">
+            <h2>Star wars - Episodio V</h2>
+            <p>Fecha de lanzamiento: 1980</p>
+            <p>Descripción: Tras un ataque sorpresa de las tropas imperiales a las bases camufladas de la alianza rebelde, Luke Skywalker, en compañía de R2D2, parte hacia el planeta Dagobah en busca de Yoda, el último maestro Jedi, para que le enseñe los secretos de la Fuerza. Mientras, Han Solo, la princesa Leia, Chewbacca, y C3PO esquivan a las fuerzas imperiales y piden refugio al antiguo propietario del Halcón Milenario, Lando Calrissian, en la ciudad minera de Bespin, donde les prepara una trampa urdida por Darth Vader.</p>
+            <button onclick="showMore1()" aria-expanded="false" aria-controls="more-info2">Leer más</button>
+            <div id="more-info2" style="display: none;">
+                <p>La alianza rebelde, perseguida por el Imperio, ha establecido una nueva base secreta en el remoto planeta helado de Hoth. Darth Vader, obsesionado por encontrar a Luke Skywalker, ha enviado miles de sondas espaciales por toda la galaxia. Una de ellas llega hasta Hoth y es vista por Luke, quien cree que se trata de un meteorito, y se dirige a inspeccionar el lugar en el que ha caído cuando es atacado por un wampa. Mientras tanto, Han Solo, extrañado por la tardanza de su amigo, decide ir a buscarlo. Luke logra escapar de ser devorado por el wampa haciendo uso de la Fuerza para alcanzar su sable de luz y cercenar un brazo a la criatura, pero en su huida cae agotado en el inmenso desierto de hielo y tiene una visión de Obi-Wan Kenobi, quien le indica que debe ir al planeta Dagobah para entrenarse con el maestro Yoda. Han encuentra a Luke y construye un refugio para pasar la noche. Al día siguiente son encontrados por su compañeros y, de retorno a la base rebelde, Luke se recupera de sus heridas en un tanque de bacta. Los rebeldes localizan un androide espía imperial en las inmediaciones de la base y su destrucción alerta al Imperio. Darth Vader comienza a desplegar el ataque contra las tropas rebeldes, pero el general Veers saca las naves del hiperespacio demasiado cerca del plantea y alerta a las tropas rebeldes de su presencia.</p>
+            </div>
+        </article>
+
+    </main>
+
+
+    <script src="script.js"></script>
+</body>
+</html>
